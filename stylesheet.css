@@ -16,6 +16,12 @@
     --base: clamp(15px, 0.95rem + 0.2vw, 18px);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -178,6 +184,32 @@ h1 {
     margin-top: .75rem;
 }
 
+.skill-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.skill-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.skill-block .typing {
+    max-width: 88vw;
+}
+
+.skill-block .icons {
+  width: 260px;
+  max-width: 80vw;
+  height: auto;
+}
+
 .status {
     margin-top: var(--space-3);
     padding: var(--space-2) var(--space-3);
@@ -231,12 +263,12 @@ h1 {
 }
 
 .kv dd:has(.tag) {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem .6rem;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem .6rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
 }
 
 .kv dd:has(.tag) .tag {
@@ -274,6 +306,18 @@ h1 {
 
     .kv dd:has(.tag) {
         justify-content: center;
+    }
+
+    .skill-section {
+        gap: 1.25rem;
+    }
+
+    .skill-block {
+        width: 100%;
+    }
+
+    .skill-block .icons {
+        width: min(360px, 92vw);
     }
 }
 
